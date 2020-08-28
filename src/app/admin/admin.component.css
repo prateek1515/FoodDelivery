@@ -1,0 +1,25 @@
+div{
+  background-image: url("../../assets/images/hotel1.jpg");
+  height: 900px;
+  width: 1400px;
+  background-size: cover;
+}
+form{
+  padding-left: 30%;
+}
+h1{
+
+  padding-left: 30%;
+  padding-top: 10%;
+
+	color: #343434;
+	font-weight: normal;
+	font-family: 'Ultra', sans-serif;
+	font-size: 36px;
+	/* line-height: 42px; */
+	text-transform: uppercase;
+	text-shadow: 0 2px white, 0 3px #777;
+}
+input{
+  padding: 7px;
+}

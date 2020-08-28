@@ -1,0 +1,22 @@
+<div class="main">
+<div>
+    <ul>
+        <li><a href="/user">Hotels</a></li>
+        <li><a href="/myOrders">My Orders</a></li>
+
+        <li><a href="/user/dishes/cart"><img class="cart" src="../../assets/images/cart.jpg"></a></li>
+        <li><a href="">Log Out</a></li>
+      </ul>
+</div>
+     <h1>SELECT RESTUARENT TO ORDER</h1>
+      <ng-container *ngFor="let hotels of hotelList">
+                <div class="card" style="float:left" (click)="dishList(hotels._id)">
+                    <img class="card-img-top" src='../../assets/images/{{hotels.image}}' alt="Card image cap">
+                    <div class="card-body">
+                        <h4>{{hotels.name}}</h4>
+                        <h4>{{hotels.veg}}</h4>
+
+                    </div>
+                </div>
+       </ng-container>
+</div>

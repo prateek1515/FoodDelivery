@@ -1,0 +1,32 @@
+<div class="main">
+<div class="form">
+    <form [formGroup]="ItemList">
+
+      <input type="string" formControlName='Name' placeholder="Name of Dish">
+      <input type="string" formControlName='price'>
+      <input type="file" formControlName='Image' ><br>
+      <br>
+      <button class="btn btn-success" (click)="createDish()">SUBMIT</button>
+
+    </form>
+    <br>
+    <h1>List of available dishes</h1>
+    <ng-container *ngFor="let item of items">
+
+        <div class="card" style="float:left">
+            <img class="card-img-top" src='../../assets/images/{{item.Image}}' alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{item.Name}}</h5>
+              <h5>{{item.price}} Rs</h5>
+
+            </div>
+            <div>
+            <div class="Button">
+                <div class="Button1" (click)="deleteDish(item)">DELETE DISH</div>
+            </div>
+            </div>
+        </div>
+        </ng-container>
+    </div>
+</div>
+

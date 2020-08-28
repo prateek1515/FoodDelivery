@@ -1,0 +1,35 @@
+<div class="main">
+  <div>
+    <ul>
+        <li><a href="/user">Hotels</a></li>
+        <li><a href="/myOrders">My Orders</a></li>
+<!--
+        <li ><a href="">Log Out</a></li> -->
+        <div class="on" (click)="cartItems()">
+        <li><img class="cart" src="../../assets/images/cart.jpg"></li>
+        </div>
+
+        <li ><a href="">Log Out</a></li>
+      </ul>
+</div>
+<div>
+<ng-container *ngFor="let item of items">
+  <div class="card" >
+      <div class="card-body">
+      <img  class="card-img-top" src="../../assets/images/{{item.Image}}">
+
+        <h5 class="card-title">{{item.Name}}</h5>
+        <h5 class="card-text">{{item.price}}</h5>
+
+  </div>
+    <div class="addDish" (click)="addCart(item)"><h4 >
+      {{item.button}}</h4></div>
+
+</div>
+
+</ng-container>
+</div><br>
+<div style="margin-left:41%">
+<a class="btn btn-success" (click)="cartItems()">GO TO CART</a>
+</div>
+</div>

@@ -1,0 +1,40 @@
+<div>
+  <ul>
+      <li><a href="/user">Hotels</a></li>
+      <li><a href="/myOrder">My Orders</a></li>
+
+      <li><a href="/user/dishes/cart"><img class="cart" src="../../assets/images/cart.jpg"></a></li>
+      <li><a href="">LogOut</a></li>
+    </ul>
+</div>
+<h1>YOU ADDED THESE ITEMS IN YOUR CART</h1>
+
+<ng-container *ngFor="let item of cart">
+  <div class="card" >
+      <div class="card-body">
+      <img  class="card-img-top" src="../../assets/images/{{item.Image}}">
+
+        <h5 class="card-title">{{item.Name}}</h5>
+        <h5 class="card-text">{{item.price}}</h5>
+        <button class="plus" (click)="addCart(item)">+</button>
+        <button class="minus"(click)="removeCart(item)">-</button>
+        <!-- <a href="#" class="btn btn-primary">View Profile</a> -->
+      </div>
+
+  </div>
+
+</ng-container>
+<br>
+<div>
+<h3>Total =  {{total}}</h3>
+<ng-container *ngFor="let totalValue of cartList">
+  <div class="total">
+ <h5> <p>{{totalValue.Name}}=
+       {{totalValue.Price}} * {{totalValue.quant}}
+  </p>
+  </h5>
+ </div>
+
+</ng-container>
+</div>
+<button disabled={{disable}} class="btn btn-success" style="margin-left:38%;" (click)="placeOrder()">PLACE ORDER</button>

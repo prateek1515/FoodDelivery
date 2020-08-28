@@ -1,0 +1,76 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left:800px ;
+  overflow: hidden;
+  background-color: #333;
+}
+.main{
+  background-image: url("../../assets/images/hotel1.jpg");
+  height: 900px;
+  max-width: 1300px;
+  background-size: cover;
+
+}
+li {
+  border-right: 1px solid #bbb;
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  /* margin-left: 200px; */
+  padding: 14px 30px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+.cart{
+  height: 35px;
+  width: 35px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.card-img-top{
+  height: 100px;
+  width: 100px;
+  float: left;
+}
+
+.card{
+  height: 170px;
+  width: 250px;
+
+  margin-left:41%;
+  /* float: left; */
+}
+.card-body{
+  float: left;
+}
+h5{
+    padding-left:120px;
+}
+h4{
+  padding-left: 60px;
+
+}
+.addDish{
+  cursor: pointer;
+  background-color: rgb(147, 231, 147);
+}
+.on{
+  /* border-right: 1px solid #bbb; */
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  /* margin-left: 200px; */
+  padding: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}

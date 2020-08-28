@@ -1,0 +1,12 @@
+
+<div class="form">
+    <form [formGroup]="signupform">
+      <input type="string" formControlName='name' placeholder="Name"><br>
+      <input type="email" formControlName='email' placeholder="Email"><br>
+      <input type="password" formControlName='password' placeholder="Password"><br>
+      <input type="password" formControlName=confirm_pass placeholder="Confirm password">
+      <br><br>
+      <button class="btn btn-success"(click)="saveUser()">SUBMIT</button>
+
+    </form>
+    </div>

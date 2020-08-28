@@ -1,0 +1,12 @@
+
+<div class="form">
+<form [formGroup]="LoginForm">
+
+  <input type="email" formControlName='email' placeholder="Email">
+
+  <input type="password" formControlName='pass' placeholder="Password"><br>
+  <br>
+  <button class="btn btn-success" (click)="findUser()">SUBMIT</button>
+
+</form>
+</div>

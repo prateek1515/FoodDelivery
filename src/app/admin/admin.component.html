@@ -1,0 +1,21 @@
+<div class="form">
+  <h1>Enter Details Of Hotel</h1>
+  <form [formGroup]="adminForm">
+    <input type="string" formControlName='name' placeholder="Name"><br>
+    <input type="string" formControlName='city' placeholder="City"><br>
+    <input type="file" formControlName='image'><br>
+
+
+  <input type="radio" class="checkbox-inline" formControlName=veg value="veg" >Vegeterian
+  <input type="radio" class="checkbox-inline" formControlName=veg value="non-veg">Non-Vegetarian
+    <br><br>
+    <button class="btn btn-success"(click)="saveHotel()">SUBMIT</button>
+  </form>
+</div>
+
+
+
+
+
+
+

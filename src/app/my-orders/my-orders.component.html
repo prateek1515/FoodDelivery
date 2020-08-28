@@ -1,0 +1,28 @@
+<div class="main">
+  <h1>YOUR ORDERS</h1>
+  <div>
+      <ng-container *ngFor="let orders of orderArray;index as i">
+
+        <div class="card" >
+            <h3>{{orders.orderDetails[0].hotel.name[i]}}</h3>
+            <h5>{{orders.orderDetails[0].time}}</h5>
+           <ng-container *ngFor="let order of orders.orderDetails">
+
+            <div class="card-body">
+              <img  class="card-img-top" src="../../assets/images/{{order.Image}}">
+
+              <h4 style="margin-left:40px" card-title>{{order.Name}}</h4>
+              <h5 style="margin-left:980px">{{order.Price}} * {{order.quant}}</h5>
+              <!-- <h5>{{order.hotel.name}}</h5> -->
+            </div>
+          </ng-container>
+
+
+      <h4 style="margin-left:900px">TOTAL={{orders.totalAmount}}</h4>
+
+    </div>
+      <!-- <h3>-----------------------------------------------------------------------------------------------------------------------------------------------</h3> -->
+      <br><br>
+      </ng-container>
+      </div><br>
+</div>
